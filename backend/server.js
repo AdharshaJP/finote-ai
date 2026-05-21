@@ -23,7 +23,14 @@ const __dirname  = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 5000;
 console.log("MONGO URI:", process.env.MONGODB_URI);
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    /\.vercel\.app$/,
+    process.env.FRONTEND_URL,
+  ].filter(Boolean),
+  credentials: true,
+}));
 app.use(express.json());
 
 
