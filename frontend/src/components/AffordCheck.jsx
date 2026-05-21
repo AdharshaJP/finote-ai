@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Bar } from 'react-chartjs-2';
+import { aiAPI } from '../services/api.js';
 import {
   Chart as ChartJS, CategoryScale, LinearScale, BarElement, Tooltip, Legend,
 } from 'chart.js';
@@ -28,14 +29,8 @@ const AffordCheck = ({ userId }) => {
     setResult(null);
 
     try {
-      const res = await fetch('/api/ai/afford', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId, item: item.trim(), amount: Number(amount) }),
-      });
-      if (!res.ok) throw new Error('Service error');
-      const data = await res.json();
-      setResult(data);
+      const res = await aiAPI.afford(userId, item.trim(), Number(amount));
+      setResult(res.data);
     } catch {
       setError('Could not check affordability. Please try again.');
     } finally {

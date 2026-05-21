@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { X, Send, Sparkles, Bot, User } from 'lucide-react';
 import { useChat } from '../context/ChatContext.jsx';
 import { useAuth } from '../context/AuthContext.jsx';
+import { aiAPI } from '../services/api.js';
 
 const QUICK_PROMPTS = [
   'How is my spending this month?',
@@ -65,14 +66,9 @@ const AIChat = () => {
     setIsTyping(true);
 
     try {
-      const res = await fetch('/api/ai/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question, userId: user.id }),
-      });
-      const data = await res.json();
+      const res = await aiAPI.chat(question, user.id);
       const aiTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-      setMessages(prev => [...prev, { role: 'ai', text: data.answer, time: aiTime }]);
+      setMessages(prev => [...prev, { role: 'ai', text: res.data.answer, time: aiTime }]);
     } catch {
       setMessages(prev => [...prev, {
         role: 'ai',
