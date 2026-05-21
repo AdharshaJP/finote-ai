@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(npm install:*)",
-      "Bash(node -e \"import\\('multer'\\).then\\(m => console.log\\('multer ok'\\)\\).catch\\(e => console.log\\('multer fail:', e.message\\)\\); import\\('tesseract.js'\\).then\\(m => console.log\\('tesseract ok'\\)\\).catch\\(e => console.log\\('tesseract fail:', e.message\\)\\);\")"
-    ]
-  }
-}
