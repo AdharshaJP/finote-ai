@@ -31,25 +31,7 @@
 
 </div>
 
----
 
-## 📸 Screenshots
-
-<div align="center">
-
-| Dashboard | Expense Tracker | AI Insights |
-|:---------:|:---------------:|:-----------:|
-| ![Dashboard](https://via.placeholder.com/380x220/6366f1/ffffff?text=📊+Dashboard) | ![Tracker](https://via.placeholder.com/380x220/8b5cf6/ffffff?text=💸+Expense+Tracker) | ![AI](https://via.placeholder.com/380x220/7c3aed/ffffff?text=🤖+AI+Insights) |
-
-| OCR Bill Scanner | Spending Analytics | Affordability Analysis |
-|:----------------:|:-----------------:|:----------------------:|
-| ![OCR](https://via.placeholder.com/380x220/4f46e5/ffffff?text=📄+OCR+Scanner) | ![Analytics](https://via.placeholder.com/380x220/7c3aed/ffffff?text=📈+Analytics) | ![Afford](https://via.placeholder.com/380x220/6d28d9/ffffff?text=✅+Affordability) |
-
-> ⚠️ *Replace placeholders with actual screenshots before publishing.*
-
-</div>
-
----
 
 ## 🌐 Live Demo
 
