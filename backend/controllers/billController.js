@@ -65,8 +65,9 @@ async function extractText(filePath, mimetype) {
     }
   }
 
-  // Image: Tesseract OCR
-  const worker = await createWorker("eng");
+  // Image: Tesseract OCR — use local traineddata if available
+  const langPath = path.join(__dirname, '..');
+  const worker = await createWorker("eng", 1, { langPath });
   try {
     const {
       data: { text },

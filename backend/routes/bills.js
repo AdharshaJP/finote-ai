@@ -4,6 +4,11 @@ import { createWorker } from 'tesseract.js';
 import Groq from 'groq-sdk';
 import Bill from '../models/Bill.js';
 import auth from '../middleware/auth.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname  = path.dirname(__filename);
 
 const router = express.Router();
 
@@ -29,7 +34,8 @@ async function extractText(buffer, mimetype) {
       return (data.text || '').trim();
     } catch { return ''; }
   }
-  const worker = await createWorker('eng');
+  const langPath = path.join(__dirname, '..');
+  const worker = await createWorker('eng', 1, { langPath });
   try {
     const { data: { text } } = await worker.recognize(buffer);
     return (text || '').trim();
