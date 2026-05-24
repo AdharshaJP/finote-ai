@@ -530,7 +530,7 @@ const Dashboard = () => {
                 <span className="db-legend-dot" style={{ background: '#EF4444' }} /> Expenses
               </div>
             </div>
-            <div style={{ height: 220 }}>
+            <div className="db-chart-h-220">
               {monthLabels.length > 0
                 ? <Line data={lineData} options={{ ...chartOpts, plugins: { legend: { display: false } } }} />
                 : <div className="db-chart-empty"><Zap size={24} /> Add transactions to see trends</div>
@@ -544,7 +544,7 @@ const Dashboard = () => {
             </div>
             {catItems.length > 0 ? (
               <>
-                <div style={{ height: 160, margin: '0 auto', maxWidth: 160 }}>
+                <div className="db-chart-h-160">
                   <Doughnut
                     data={donutData}
                     options={{
@@ -574,7 +574,7 @@ const Dashboard = () => {
               <h3 className="db-chart-title">Weekly Spending</h3>
               <span className="db-chart-sub">Last 7 days</span>
             </div>
-            <div style={{ height: 200 }}>
+            <div className="db-chart-h-200">
               {weekRaw.length > 0
                 ? <Bar data={weeklyData} options={chartOpts} />
                 : <div className="db-chart-empty"><Zap size={24} /> No spending this week</div>
@@ -587,7 +587,7 @@ const Dashboard = () => {
               <h3 className="db-chart-title">Income vs Expenses</h3>
               <span className="db-chart-sub">Last 6 months</span>
             </div>
-            <div style={{ height: 200 }}>
+            <div className="db-chart-h-200">
               {compMonths.length > 0
                 ? <Bar data={barCompData} options={groupedBarOpts} />
                 : <div className="db-chart-empty"><Zap size={24} /> Add transactions to compare</div>
@@ -603,7 +603,7 @@ const Dashboard = () => {
               <h3 className="db-chart-title">Spending by Day</h3>
               <span className="db-chart-sub">Avg per weekday (90d)</span>
             </div>
-            <div style={{ height: 190 }}>
+            <div className="db-chart-h-190">
               {dowAmounts.some(v => v > 0)
                 ? <Bar data={dowData} options={chartOpts} />
                 : <div className="db-chart-empty"><Zap size={24} /> Not enough data yet</div>

@@ -67,8 +67,8 @@ const Budgets = () => {
   return (
     <Layout>
       <div className="fade-in">
-        <div className="flex justify-between items-center mb-3">
-          <h1 style={{ fontSize: '2rem', fontWeight: '700', color: 'var(--text-dark)' }}>
+        <div className="flex justify-between items-center mb-3 page-header">
+          <h1 style={{ fontSize: '1.75rem', fontWeight: '700', color: 'var(--text-dark)' }}>
             Budgets
           </h1>
           <button
