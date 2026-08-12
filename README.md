@@ -33,16 +33,6 @@
 
 
 
-## 🌐 Live Demo
-
-| Service | URL | Status |
-|---------|-----|--------|
-| 🖥️ **Frontend** | [finote.vercel.app](https://finote.vercel.app) | ![Live](https://img.shields.io/badge/-Live-success?style=flat-square) |
-| 🔧 **Backend API** | [finote-api.onrender.com/api](https://finote-api.onrender.com/api) | ![Live](https://img.shields.io/badge/-Live-success?style=flat-square) |
-| 🤖 **AI Microservice** | [finote-ai.onrender.com/docs](https://finote-ai.onrender.com/docs) | ![Live](https://img.shields.io/badge/-Live-success?style=flat-square) |
-
-> 💡 **Demo Credentials** — Email: `demo@finote.app` | Password: `Demo@1234`
-
 ---
 
 ## ✨ Features
